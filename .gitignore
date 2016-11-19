@@ -4,3 +4,9 @@ bin/adventures_of_beary
 
 
 obj/*.o
+
+
+.DS_Store
+
+
+
