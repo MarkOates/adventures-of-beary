@@ -7650,7 +7650,7 @@ public:
 			std::stringstream ss;
 			ss << "switch stick " << index_num << " out of bounds";
 			start_help_message(ss.str().c_str());
-			std::cout << ss << std::endl;
+			std::cout << ss.str() << std::endl;
 			return false;
 		}
 
