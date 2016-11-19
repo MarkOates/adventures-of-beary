@@ -1,3 +1,26 @@
+#define PI 3.14159265f
+
+float get_degrees(float radians)
+{
+   return (radians * (180 / PI));
+}
+
+float get_radians(float degrees)
+{
+   return (degrees * (PI / 180));
+}
+
+
+
+
+float distance(float x1, float y1, float x2, float y2)
+{
+      return sqrt( ((x1 - x2) * (x1 - x2)) + ((y1 - y2) * (y1 - y2)) ) ;
+}
+
+
+
+
 float random_float(float min, float max)
 {
     return ((float) rand()/RAND_MAX)*(max-min) + min;
