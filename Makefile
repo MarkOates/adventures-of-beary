@@ -19,4 +19,9 @@ obj/motion.o:
 	g++ -std=gnu++11 -c -o obj/motion.o motion.cpp
 
 
+.PHONY: clean
+clean:
+	-rm obj/*.o
+	-rm bin/bearys_bash
+
 
