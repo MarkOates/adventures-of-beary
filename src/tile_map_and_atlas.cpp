@@ -22,6 +22,42 @@ TileAtlas::TileIndexInfo::TileIndexInfo()
 
 
 
+
+// this vertex structure is something that could be used in the future when adding
+// lighting features
+
+/*
+   typedef struct
+   {
+   float x, y, z;
+   float texture_u, texture_v;
+   float normal_u, normal_v;
+   float height_u, height_v;
+   float height;
+   ALLEGRO_COLOR color;
+   } ALLEGRO_TILE_VERTEX;
+
+
+
+
+   ALLEGRO_VERTEX_ELEMENT elems[] = {
+   {ALLEGRO_PRIM_POSITION, ALLEGRO_PRIM_FLOAT_3, offsetof(ALLEGRO_VERTEX_WITH_NORMAL, x)},
+   {ALLEGRO_PRIM_TEX_COORD, ALLEGRO_PRIM_FLOAT_2, offsetof(ALLEGRO_VERTEX_WITH_NORMAL, texture_u)},
+   {ALLEGRO_PRIM_USER_ATTR, ALLEGRO_PRIM_FLOAT_2, offsetof(ALLEGRO_VERTEX_WITH_NORMAL, normal_u)},
+   {ALLEGRO_PRIM_USER_ATTR, ALLEGRO_PRIM_FLOAT_2, offsetof(ALLEGRO_VERTEX_WITH_NORMAL, height_u)},
+   {ALLEGRO_PRIM_COLOR_ATTR, 0, offsetof(ALLEGRO_VERTEX_WITH_NORMAL, color)},
+   {ALLEGRO_PRIM_USER_ATTR, ALLEGRO_PRIM_FLOAT_3, offsetof(ALLEGRO_VERTEX_WITH_NORMAL, nx)},
+   {0, 0, 0}
+   };
+
+   ALLEGRO_VERTEX_DECLARATION *vertex_declaration = al_create_vertex_decl(elems, sizeof(ALLEGRO_VERTEX_WITH_NORMAL));
+   */
+
+
+
+
+
+
 // for future purposes, this (currently unused) function should be used to replace the current technique that is used to build the TileAtlas
 
 ALLEGRO_BITMAP *TileAtlas::build_tile_atlas(int tile_w, int tile_h, std::vector<TileIndexInfo> &tile_index)
