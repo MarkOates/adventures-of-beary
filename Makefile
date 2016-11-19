@@ -9,8 +9,8 @@ ALLEGRO_LIBS=-lallegro_color -lallegro_font -lallegro_ttf -lallegro_dialog -lall
 TMX_LIBS=-ltmx -lxml2 -lz
 
 
-all: obj/motion.o obj/main.o obj/tile_map_and_atlas.o obj/tile_map.o
-	g++ -o bin/adventures_of_beary obj/main.o obj/motion.o obj/tile_map_and_atlas.o obj/tile_map.o $(ALLEGRO_LIBS) $(TMX_LIBS)
+all: obj/motion.o obj/main.o obj/tile_atlas.o obj/tile_map.o
+	g++ -o bin/adventures_of_beary obj/main.o obj/motion.o obj/tile_atlas.o obj/tile_map.o $(ALLEGRO_LIBS) $(TMX_LIBS)
 
 
 obj/main.o:
@@ -21,8 +21,8 @@ obj/motion.o:
 	g++ -Wall -Werror -std=gnu++11 -c -o obj/motion.o src/motion.cpp
 
 
-obj/tile_map_and_atlas.o:
-	g++ -Wall -Werror -std=gnu++11 -c -o obj/tile_map_and_atlas.o src/tile_map_and_atlas.cpp -I$(ALLEGRO_DIR) -I$(INCLUDE_DIR)
+obj/tile_atlas.o:
+	g++ -Wall -Werror -std=gnu++11 -c -o obj/tile_atlas.o src/tile_atlas.cpp -I$(ALLEGRO_DIR) -I$(INCLUDE_DIR)
 
 
 obj/tile_map.o:
