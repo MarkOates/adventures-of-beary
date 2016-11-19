@@ -1,0 +1,97 @@
+
+#
+# room 1
+#
+
+[enemy 1]
+world_num = 1
+level_num = 0
+map_num = 1
+origin_x = 200 
+origin_y = 100 
+type = medusa head
+
+[enemy 2]
+world_num = 1
+level_num = 0
+map_num = 1
+origin_x = 204 
+origin_y = 102 
+type = yellow bear
+
+[enemy 3]
+world_num = 1
+level_num = 0
+map_num = 1
+origin_x = 304 
+origin_y = 72 
+type = yellow bear
+
+#
+# room 2
+#
+
+[enemy 4]
+world_num = 1
+level_num = 0
+map_num = 2
+origin_x = 304 
+origin_y = 160 
+type = yellow bear
+
+[enemy 5]
+world_num = 1
+level_num = 0
+map_num = 2
+origin_x = 476 
+origin_y = 160 
+type = yellow bear
+
+#
+# room 3
+#
+
+[enemy 6]
+world_num = 1
+level_num = 0
+map_num = 3
+origin_x = 320
+origin_y = 576
+type = yellow bear
+
+[enemy 7]
+world_num = 1
+level_num = 0
+map_num = 3
+origin_x = 480
+origin_y = 528
+type = yellow bear
+
+[enemy 8]
+world_num = 1
+level_num = 0
+map_num = 3
+origin_x = 512
+origin_y = 528
+type = yellow bear
+
+[enemy 9]
+world_num = 1
+level_num = 0
+map_num = 3
+origin_x = 448
+origin_y = 608
+type = yellow bear
+
+[enemy 10]
+world_num = 1
+level_num = 0
+map_num = 3
+origin_x = 608
+origin_y = 592
+type = yellow bear
+
+
+
+
+

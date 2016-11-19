@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="300" height="112" tilewidth="16" tileheight="16" backgroundcolor="#a1ebe0" nextobjectid="271">
+ <tileset firstgid="1" name="boundry_tileset" tilewidth="16" tileheight="16" tilecount="64">
+  <image source="../../images/boundry_tileset.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="65" name="beary_tileset_02" tilewidth="16" tileheight="16" spacing="1" margin="1" tilecount="100">
+  <image source="../../../../beary_tileset_02.png" width="171" height="171"/>
+ </tileset>
+ <objectgroup name="ScreenGrid" opacity="0.55">
+  <object id="1" x="0" y="0" width="400" height="224"/>
+  <object id="139" x="400" y="0" width="400" height="224"/>
+  <object id="140" x="0" y="224" width="400" height="224"/>
+  <object id="141" x="400" y="224" width="400" height="224"/>
+  <object id="142" x="0" y="448" width="400" height="224"/>
+  <object id="143" x="400" y="448" width="400" height="224"/>
+  <object id="144" x="800" y="0" width="400" height="224"/>
+  <object id="145" x="1200" y="0" width="400" height="224"/>
+  <object id="146" x="800" y="224" width="400" height="224"/>
+  <object id="147" x="1200" y="224" width="400" height="224"/>
+  <object id="148" x="800" y="448" width="400" height="224"/>
+  <object id="149" x="1200" y="448" width="400" height="224"/>
+  <object id="150" x="0" y="672" width="400" height="224"/>
+  <object id="151" x="400" y="672" width="400" height="224"/>
+  <object id="152" x="0" y="896" width="400" height="224"/>
+  <object id="153" x="400" y="896" width="400" height="224"/>
+  <object id="154" x="0" y="1120" width="400" height="224"/>
+  <object id="155" x="400" y="1120" width="400" height="224"/>
+  <object id="156" x="800" y="672" width="400" height="224"/>
+  <object id="157" x="1200" y="672" width="400" height="224"/>
+  <object id="158" x="800" y="896" width="400" height="224"/>
+  <object id="159" x="1200" y="896" width="400" height="224"/>
+  <object id="160" x="800" y="1120" width="400" height="224"/>
+  <object id="161" x="1200" y="1120" width="400" height="224"/>
+  <object id="162" x="1600" y="0" width="400" height="224"/>
+  <object id="163" x="2000" y="0" width="400" height="224"/>
+  <object id="164" x="1600" y="224" width="400" height="224"/>
+  <object id="165" x="2000" y="224" width="400" height="224"/>
+  <object id="166" x="1600" y="448" width="400" height="224"/>
+  <object id="167" x="2000" y="448" width="400" height="224"/>
+  <object id="168" x="2400" y="0" width="400" height="224"/>
+  <object id="169" x="2800" y="0" width="400" height="224"/>
+  <object id="170" x="2400" y="224" width="400" height="224"/>
+  <object id="171" x="2800" y="224" width="400" height="224"/>
+  <object id="172" x="2400" y="448" width="400" height="224"/>
+  <object id="173" x="2800" y="448" width="400" height="224"/>
+  <object id="174" x="1600" y="672" width="400" height="224"/>
+  <object id="175" x="2000" y="672" width="400" height="224"/>
+  <object id="176" x="1600" y="896" width="400" height="224"/>
+  <object id="177" x="2000" y="896" width="400" height="224"/>
+  <object id="178" x="1600" y="1120" width="400" height="224"/>
+  <object id="179" x="2000" y="1120" width="400" height="224"/>
+  <object id="180" x="2400" y="672" width="400" height="224"/>
+  <object id="181" x="2800" y="672" width="400" height="224"/>
+  <object id="182" x="2400" y="896" width="400" height="224"/>
+  <object id="183" x="2800" y="896" width="400" height="224"/>
+  <object id="184" x="2400" y="1120" width="400" height="224"/>
+  <object id="185" x="2800" y="1120" width="400" height="224"/>
+  <object id="186" x="3200" y="0" width="400" height="224"/>
+  <object id="187" x="3600" y="0" width="400" height="224"/>
+  <object id="188" x="3200" y="224" width="400" height="224"/>
+  <object id="189" x="3600" y="224" width="400" height="224"/>
+  <object id="190" x="3200" y="448" width="400" height="224"/>
+  <object id="191" x="3600" y="448" width="400" height="224"/>
+  <object id="192" x="4000" y="0" width="400" height="224"/>
+  <object id="193" x="4400" y="0" width="400" height="224"/>
+  <object id="194" x="4000" y="224" width="400" height="224"/>
+  <object id="195" x="4400" y="224" width="400" height="224"/>
+  <object id="196" x="4000" y="448" width="400" height="224"/>
+  <object id="197" x="4400" y="448" width="400" height="224"/>
+  <object id="210" x="3200" y="672" width="400" height="224"/>
+  <object id="211" x="3600" y="672" width="400" height="224"/>
+  <object id="212" x="3200" y="896" width="400" height="224"/>
+  <object id="213" x="3600" y="896" width="400" height="224"/>
+  <object id="214" x="3200" y="1120" width="400" height="224"/>
+  <object id="215" x="3600" y="1120" width="400" height="224"/>
+  <object id="216" x="4000" y="672" width="400" height="224"/>
+  <object id="217" x="4400" y="672" width="400" height="224"/>
+  <object id="218" x="4000" y="896" width="400" height="224"/>
+  <object id="219" x="4400" y="896" width="400" height="224"/>
+  <object id="220" x="4000" y="1120" width="400" height="224"/>
+  <object id="221" x="4400" y="1120" width="400" height="224"/>
+  <object id="222" x="1200" y="1568" width="400" height="224"/>
+  <object id="223" x="3600" y="1344" width="400" height="224"/>
+  <object id="224" x="2800" y="1568" width="400" height="224"/>
+  <object id="225" x="2400" y="1568" width="400" height="224"/>
+  <object id="226" x="0" y="1568" width="400" height="224"/>
+  <object id="227" x="2000" y="1344" width="400" height="224"/>
+  <object id="228" x="4000" y="1568" width="400" height="224"/>
+  <object id="229" x="3200" y="1344" width="400" height="224"/>
+  <object id="230" x="4000" y="1344" width="400" height="224"/>
+  <object id="231" x="4400" y="1568" width="400" height="224"/>
+  <object id="232" x="400" y="1344" width="400" height="224"/>
+  <object id="233" x="0" y="1344" width="400" height="224"/>
+  <object id="234" x="2400" y="1344" width="400" height="224"/>
+  <object id="235" x="2000" y="1568" width="400" height="224"/>
+  <object id="236" x="800" y="1344" width="400" height="224"/>
+  <object id="237" x="1600" y="1344" width="400" height="224"/>
+  <object id="238" x="400" y="1568" width="400" height="224"/>
+  <object id="239" x="4400" y="1344" width="400" height="224"/>
+  <object id="240" x="3200" y="1568" width="400" height="224"/>
+  <object id="241" x="1200" y="1344" width="400" height="224"/>
+  <object id="242" x="2800" y="1344" width="400" height="224"/>
+  <object id="243" x="800" y="1568" width="400" height="224"/>
+  <object id="244" x="3600" y="1568" width="400" height="224"/>
+  <object id="245" x="1600" y="1568" width="400" height="224"/>
+ </objectgroup>
+ <layer name="layer[0]" width="300" height="112">
+  <data encoding="base64" compression="zlib">
+   eJzt1FsKgzAURdE7Nl8dRu0YhI6/fgQaRKkFsdy6FhyCYPK5p4iYIq9nGfD/ptArIAe9ArLQKyALvQKy0CsgC70CstArIIvMvWpDr+BKft2rcd593uOLO7cyvYJr2erVEO8uDNV5tDH0Cthn2auhrF85++r7k2FjS2PoFbDPdOKaeV1Z3Zp6Xflvbd3ijSb0Cq7k7F61ZXVrjhgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQzwsM70tm
+  </data>
+ </layer>
+ <layer name="boundary" width="300" height="112">
+  <data encoding="base64" compression="zlib">
+   eJzt1DEKw0AQA8B1fa/I/z+ZJoU5zrDGEEfODKhXI42qGpVrVHZ/oC997+n9gb70vaf3B/rS957eH+hL33t6f6Avfe/p/YG+9L2n9wf60vee3h/oS977qOz+wDl3733bZe/1ycpYBHi+o72vPuGbv+CvgNm896OfOvsPV//OXwGz7j/9eoDnu/tn/BUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8rzddAQiG
+  </data>
+ </layer>
+ <objectgroup name="CameraRegions">
+  <object id="262" x="0" y="0" width="800" height="224"/>
+ </objectgroup>
+ <objectgroup name="Objects">
+  <object id="247" name="checkpoint" type="checkpoint" x="144" y="160"/>
+  <object id="257" name="door" type="door" x="672" y="144" width="32" height="48">
+   <properties>
+    <property name="destination_label" value="B"/>
+    <property name="label" value="B"/>
+   </properties>
+  </object>
+  <object id="263" name="enemy" type="yellow_bear" x="384" y="144" width="16" height="32">
+   <properties>
+    <property name="type" value="yellow bear"/>
+   </properties>
+  </object>
+  <object id="269" name="enemy" type="yellow_bear" x="256" y="192">
+   <properties>
+    <property name="type" value="yellow bear"/>
+   </properties>
+  </object>
+  <object id="270" name="enemy" type="yellow_bear" x="304" y="192">
+   <properties>
+    <property name="type" value="yellow bear"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="layer[2]" width="300" height="112">
+  <data encoding="base64" compression="zlib">
+   eJzt10sKwCAMBUDvZ3/3P027qGBFaV2EbmbggUaErAJJCQAAAAAAAAAAAADiLFVm/wDsV7ZBjh/7AijqOTXyZW6Zd0Ck9U7ZtXrntjZbb99zeu6D+aWH3r0EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACDKCQFNFo4=
+  </data>
+ </layer>
+ <layer name="layer[1]" width="300" height="112">
+  <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgiD/r25IQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB8GQ0eAAE=
+  </data>
+ </layer>
+</map>

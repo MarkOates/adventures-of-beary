@@ -1,0 +1,93 @@
+
+#############
+# WORLD MAP #
+#############
+
+
+[door A]
+world_num = 1
+level_num = 0
+map_num = 1
+x = t95
+y = t13
+label = A
+type = normal
+destination_world_num = 1 
+destination_label = A
+
+[door B]
+world_num = 1
+level_num = 0
+map_num = 1
+x = t82
+y = t8
+label = B
+type = normal
+destination_world_num = 1 
+destination_label = B 
+
+[door C]
+world_num = 1
+level_num = 0
+map_num = 1
+x = t67
+y = t8
+label = C
+type = normal
+destination_world_num = 1 
+destination_label = C
+
+[door D]
+world_num = 1
+level_num = 0
+map_num = 1
+x = t25
+y = t6
+label = D
+type = normal
+destination_world_num = 1 
+destination_label = D
+
+[door E]
+world_num = 1
+level_num = 0
+map_num = 1
+x = t6
+y = t9
+label = E
+type = normal
+destination_world_num = 1 
+destination_label = E
+
+[door F]
+world_num = 1
+level_num = 0
+map_num = 1
+x = t12
+y = t14
+label = F
+type = normal
+destination_world_num = 1 
+destination_label = F
+
+
+
+#############
+# DUNGEON 1 #
+#############
+
+[door dungeon-1]
+world_num = 1
+level_num = 1
+map_num = 1
+x = t105
+y = t69
+label = A
+type = normal
+destination_world_num = 1 
+destination_label = A
+
+
+
+
+

@@ -1,0 +1,59 @@
+# An empty space is required for the first line of a config file
+
+###########
+# Level 1 #
+###########
+
+
+[checkpoint 1]
+world_num = 1
+level_num = 0
+map_num = 1
+x = 616
+y = 176
+
+[checkpoint 2]
+world_num = 1
+level_num = 0
+map_num = 4
+x = 272
+y = 192
+
+
+
+###########
+# Level 4 #
+###########
+
+[checkpoint 3]
+world_num = 1
+level_num = 3
+map_num = 2
+x = t15
+y = t13
+
+
+###########
+# Level 5 #
+###########
+
+[checkpoint 4]
+world_num = 1
+level_num = 4
+map_num = 2
+x = t18
+y = t14
+
+
+###########
+# Level 6 #
+###########
+
+[checkpoint 4]
+world_num = 1
+level_num = 5
+map_num = 1
+x = t58
+y = t62
+
+

@@ -1,0 +1,12 @@
+
+[door 1]
+world_num = 1
+leved_num = 0
+mad_num = 1
+x = t105
+y = t68
+label = A
+type = normal
+destination_world_num = 1
+destination_label = A
+

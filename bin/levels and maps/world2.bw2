@@ -1,0 +1,15 @@
+//world class
+
+[params]
+
+title: Wasteland
+
+[levels]
+
+1 first_infest.lv2
+2 tricky_spot.lv2
+3 Level_1.lv2
+4 newcastle_1.lv2
+5 first_infest.lv2
+6 tricky_spot.lv2
+

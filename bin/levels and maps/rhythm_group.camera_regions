@@ -1,0 +1,68 @@
+
+
+[camera_region 1]
+x1 = 8
+y1 = 130
+x2 = 480
+y2 = 280
+
+[camera_region 2]
+x1 = 480
+y1 = 130
+x2 = 1480
+y2 = 280
+
+[camera_region 3_right_ladders]
+x1 = 2000
+y1 = 160
+x2 = 2432
+y2 = 470
+
+[camera_region 3_firepits]
+x1 = 1480
+y1 = 132
+x2 = 2200
+y2 = 356
+
+[camera_region 4]
+x1 = 1480
+y1 = 460
+x2 = 2296
+y2 = 660
+
+[camera_region 5]
+x1 = 848
+y1 = 450
+x2 = 1480
+y2 = 660
+
+[camera_region 6]
+x1 = 0
+y1 = 450
+x2 = 848
+y2 = 660
+
+[camera_region last_left_column]
+x1 = -100 
+y1 = 660
+x2 = 280
+y2 = 1200
+
+[camera_region last-1]
+x1 = 208
+y1 = 988
+x2 = 1480
+y2 = 1208
+
+[camera_region boss]
+x1 = 1480
+y1 = 974
+x2 = 2024
+y2 = 1184
+
+[camera_region item_room]
+x1 = 2024
+y1 = 974
+x2 = 2424
+y2 = 1160
+

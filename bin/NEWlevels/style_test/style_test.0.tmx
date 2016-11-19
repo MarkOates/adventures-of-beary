@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="166" height="28" tilewidth="16" tileheight="16" nextobjectid="58">
+ <properties>
+  <property name="style" value="cavern"/>
+  <property name="title" value="style_test"/>
+ </properties>
+ <tileset firstgid="1" name="boundry_tileset_03" tilewidth="16" tileheight="16" tilecount="72">
+  <image source="../../images/boundry_tileset_03.png" width="128" height="144"/>
+ </tileset>
+ <tileset firstgid="73" name="beary_tileset_03" tilewidth="16" tileheight="16" spacing="1" margin="1" tilecount="210">
+  <image source="../../images/beary_tileset_03.png" width="171" height="358"/>
+ </tileset>
+ <objectgroup color="#d4d63a" name="StyleRegion" opacity="0.17">
+  <object id="7" name="grassland" x="1200" y="0" width="288" height="224"/>
+  <object id="11" name="cavern" x="1488" y="0" width="576" height="224"/>
+  <object id="12" name="dungeon" x="2064" y="0" width="336" height="224"/>
+ </objectgroup>
+ <layer name="background" width="166" height="28">
+  <data encoding="base64" compression="zlib">
+   eJztmFsOAiEMRdmWy3L/P36ZqCmFtrfl4T3JRIJAO3AGHFsjj86lfXfbZZmXUT+CY7UXFn8qfPTMC8nBu6ar9rQMJ6PzQnJY4Ud0zbX2SH/o5lo8873Sy1781r77IZyZzbP3/BI/leceysvPuE34/C17sXhpuS86O0f0fNL6z3jn3TOlslZnxfLsIJ+5HdghZ7SXnvGta1jhpZbXrV5m520dK5LHrEeWNrd6uTPZuXvGjuSS6WWvfbaX1jU62cvsvT4ydiQXi3Pe/KW2Ulmrm8Ezf9nrisKSJyr/6NjRXLxePj8uS94ZXnrX5LdNr2+mlwjnRvdgzR/h/CovZ+9Bai+VtboRyH3Cm4OXnbyMxEUT9dITTyprdaPxKucrC4STqLE8Mci9oPcptK/aWOReqs7QqJd08j/J9jISi06SCi+tsegkeVPh5SgOvSQSFV5qcaTfl+Q8qs5ZNLNekvPI8qfCy14cung21e/OGdDL+6CXZDdm/muJrPHKd3JyLpleSv/VoMnc6wnxQv/u4AVGlfhB
+  </data>
+ </layer>
+ <layer name="layer[0]" width="166" height="28">
+  <data encoding="base64" compression="zlib">
+   eJztwzENAAAIA7BZxv+DgaGANmkCAAAAAAAAwAdzBAAAAAAAAAAAAIBmAcO0Aqc=
+  </data>
+ </layer>
+ <layer name="boundary" width="166" height="28">
+  <data encoding="base64" compression="zlib">
+   eJztmdkKwyAQRfOep9L//9cSSsGKOquOyz0gbVIZx/E063Wdx402XQP/WOoWuX61faXvvfL1jAloJPWa6Zgi8bK0n+pX+v0kL1fJs0XEmlF97+yzlG9tm4q7u5er5MmBU3fLeknrxMlDGzuNAS/nRjMXicuafNLP3rSuD1bycqVcezFq/rPUd4W13t3LV3QCCbPUODIP7fXzbjxe9jqHrVqvXmvNickde2cnH7yOl5r7Kc0YpXjeRMaFl19GeqmNyd3O87A2b1r5tvq0Yo3wMuK5hYeXnFw1c5J6mceFlzY8/+Mj2pvZb4b5WcbXEjVPK9FeofVf6+jc8/yp8+Lo+oB4LOvs5WjNS3gIUiTr7eVl5PkDnIOnl1RcACRw3KG8pOLCSyCF683v+pLrG5wEI4CXIJLafXfuJQW8BJ5w7rs5wEvgSY/3ygBYgZdnMvrZnnQsi5d4nr4mHu9dVmxgbqL9gJegxAcKTC6x
+  </data>
+ </layer>
+ <objectgroup name="Objects">
+  <object id="2" name="player_spawn" type="player_spawn" x="132" y="384" width="16" height="32"/>
+  <object id="14" name="door" type="door" x="128" y="368" width="32" height="48"/>
+  <object id="16" name="door" type="door" x="2496" y="112" width="32" height="48"/>
+  <object id="21" name="item" type="small_jewel" x="1504" y="112"/>
+  <object id="22" name="item" type="small_jewel" x="1520" y="96"/>
+  <object id="23" name="item" type="small_jewel" x="1536" y="112"/>
+  <object id="26" name="item" type="small_jewel" x="2432" y="128" width="16" height="16"/>
+  <object id="27" name="item" type="small_jewel" x="2400" y="128" width="16" height="16"/>
+  <object id="28" name="item" type="small_jewel" x="2368" y="128" width="16" height="16"/>
+  <object id="33" name="enemy" type="yellow_bear" x="480" y="368" width="16" height="32"/>
+  <object id="43" name="enemy" type="yellow_bear" x="752" y="384" width="16" height="32"/>
+  <object id="44" name="enemy" type="yellow_bear" x="800" y="384" width="16" height="32"/>
+  <object id="45" name="enemy" type="yellow_bear" x="816" y="224" width="16" height="32"/>
+  <object id="46" name="enemy" type="yellow_bear" x="1216" y="160" width="16" height="32"/>
+  <object id="47" name="enemy" type="yellow_bear" x="1264" y="160" width="16" height="32"/>
+  <object id="48" name="enemy" type="yellow_bear" x="1312" y="160" width="16" height="32"/>
+  <object id="51" name="enemy" type="medusa_head" x="960" y="336" width="16" height="16">
+   <properties>
+    <property name="type" value="medusa_head"/>
+   </properties>
+  </object>
+  <object id="52" name="enemy" type="medusa_head" x="1008" y="128" width="16" height="16"/>
+  <object id="53" name="enemy" type="medusa_head" x="1040" y="96" width="16" height="16"/>
+  <object id="54" name="enemy" type="medusa_head" x="1040" y="160" width="16" height="16"/>
+  <object id="55" name="enemy" type="bat" x="1344" y="64" width="16" height="16"/>
+  <object id="56" name="enemy" type="bat" x="416" y="240" width="16" height="16"/>
+  <object id="57" name="enemy" type="bat" x="368" y="256" width="16" height="16"/>
+ </objectgroup>
+ <objectgroup name="CameraRegions" visible="0">
+  <object id="6" x="1040" y="0" width="1552" height="224"/>
+  <object id="30" x="576" y="64" width="464" height="224"/>
+  <object id="50" x="0" y="224" width="992" height="224"/>
+ </objectgroup>
+</map>

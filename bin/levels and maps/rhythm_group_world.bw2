@@ -1,0 +1,12 @@
+//world class
+
+[params]
+
+title: Rhythm Group
+
+[levels]
+
+1 deep_dungeon.lv2
+2 something.lv2
+3 rhythm_group.lv2
+

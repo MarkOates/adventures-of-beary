@@ -1,0 +1,41 @@
+
+
+[camera_region 1]
+x1 = t67.5
+y1 = 183.5
+x2 = t94.5
+y2 = t42.5
+
+[camera_region 5-transition-to-6]
+x1 = t124.5
+y1 = 568.5
+x2 = t144.5
+y2 = t49.5
+
+[camera_region 2]
+x1 = t94.5
+y1 = 173.5
+x2 = t124.5
+y2 = t45.5
+
+[camera_region 6-tall-right-column]
+x1 = t144.5
+y1 = 568.5
+x2 = t163.5
+y2 = t93.5
+
+[camera_region 10]
+x1 = t0.5
+y1 = t57.5
+x2 = t26.5
+y2 = t71.5
+
+[camera_region 9]
+x1 = t26.5
+y1 = t58.5
+x2 = t76.5
+y2 = t72.5
+
+
+
+

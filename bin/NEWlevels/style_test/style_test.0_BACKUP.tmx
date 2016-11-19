@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="116" height="14" tilewidth="16" tileheight="16" nextobjectid="29">
+ <properties>
+  <property name="style" value="cavern"/>
+  <property name="title" value="style_test"/>
+ </properties>
+ <tileset firstgid="1" name="boundry_tileset_03" tilewidth="16" tileheight="16" tilecount="72">
+  <image source="../../images/boundry_tileset_03.png" width="128" height="144"/>
+ </tileset>
+ <tileset firstgid="73" name="beary_tileset_03" tilewidth="16" tileheight="16" spacing="1" margin="1" tilecount="210">
+  <image source="../../images/beary_tileset_03.png" width="171" height="358"/>
+ </tileset>
+ <objectgroup color="#d4d63a" name="StyleRegion" opacity="0.17">
+  <object id="7" name="grassland" x="400" y="0" width="288" height="224"/>
+  <object id="11" name="cavern" x="688" y="0" width="576" height="224"/>
+  <object id="12" name="dungeon" x="1264" y="0" width="336" height="224"/>
+ </objectgroup>
+ <layer name="background" width="116" height="14">
+  <data encoding="base64" compression="zlib">
+   eJzdlEsOxCAMQ7nWHKv338y2RRBixwmISKiokA9+gdZ4+02GtXbbQHRZ+Z1gu/VEdK/gyOhymrFa7LpDGSyjupxmO3SNamXtV+p+G1PGp4LnLH9rXz+F1t46Z32/wyrfJxXPd942+PZz1hCeyLmyWUffEcvfw4u9o6O59Q81pOeUvZpRd8SfiY+evYKnVVcFz0gPZOdF99zKk82pqhv1Ve1Z7c/miXLJ5hl9M5E4CCtVDVk8GSZelqiWGT2B+qPrz2sg58jgyerY75n5Ilpa9Xhj7ODpyV91P6MaKGroa1HGVOT3rjP5RnPr3yqekiVif7w0mr0=
+  </data>
+ </layer>
+ <layer name="layer[0]" width="116" height="14">
+  <data encoding="base64" compression="zlib">
+   eJztw7ENAAAIA6C+7P+LF3TWARISAAAAAICfpgS4tj9YAqc=
+  </data>
+ </layer>
+ <layer name="boundary" width="116" height="14">
+  <data encoding="base64" compression="zlib">
+   eJztV0kKwCAM9O6p9P9/Ld5E4pI4aRJxINhaO1lGXFJaR77mzlDY8WeZd6+PetaKF8mpCY4fT3OYoyfVPxtHfY+gJwIWuc7G5qal4u29z3hP17NgJd6dPLl1WIlDyl1znK6n5B9O7TncdauN0ToeUU8J/srRSw0j6/lYB1DBSx29xCFB0VNrrYlak+h6IiA5Z0l8UHxoXD119tjZfYXyh7injPLwfm5C6LmSo/Tuw9Gz5UXriZwrnuxl1sMy1h3/Lazrfm1/LtT4AGLwHI4=
+  </data>
+ </layer>
+ <objectgroup name="Objects">
+  <object id="2" name="player_spawn" type="player_spawn" x="144" y="160" width="16" height="32"/>
+  <object id="14" name="door" type="door" x="140" y="144" width="32" height="48"/>
+  <object id="16" name="door" type="door" x="1696" y="112" width="32" height="48"/>
+  <object id="21" name="item" type="small_jewel" x="704" y="112">
+   <properties>
+    <property name="type" value="small_jewel"/>
+   </properties>
+  </object>
+  <object id="22" name="item" type="small_jewel" x="720" y="96">
+   <properties>
+    <property name="type" value="small_jewel"/>
+   </properties>
+  </object>
+  <object id="23" name="item" type="small_jewel" x="736" y="112">
+   <properties>
+    <property name="type" value="small_jewel"/>
+   </properties>
+  </object>
+  <object id="26" name="item" type="small_jewel" x="1632" y="128" width="16" height="16">
+   <properties>
+    <property name="type" value="small_jewel"/>
+   </properties>
+  </object>
+  <object id="27" name="item" type="small_jewel" x="1600" y="128" width="16" height="16">
+   <properties>
+    <property name="type" value="small_jewel"/>
+   </properties>
+  </object>
+  <object id="28" name="item" type="small_jewel" x="1568" y="128" width="16" height="16">
+   <properties>
+    <property name="type" value="small_jewel"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="CameraRegions" visible="0">
+  <object id="6" x="0" y="0" width="1792" height="224"/>
+ </objectgroup>
+</map>

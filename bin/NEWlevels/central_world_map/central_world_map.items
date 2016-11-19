@@ -1,0 +1,35 @@
+
+[item 1]
+world_num = 1
+level_num = 0
+map_num = 0
+type = small_jewel
+x = t18
+y = t7
+align_x = 0.5
+align_y = 0.5
+
+
+[item 2]
+world_num = 1
+level_num = 0
+map_num = 0
+type = medium_jewel
+x = t18
+y = t8.5
+align_x = 0.5
+align_y = 0.5
+
+
+[item 3]
+world_num = 1
+level_num = 0
+map_num = 0
+type = shovel
+x = t18
+y = t10
+align_x = 0.5
+align_y = 0.5
+
+
+

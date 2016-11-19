@@ -1,0 +1,253 @@
+
+
+[door 1]
+world_num = 1
+level_num = 0
+map_num = 1
+x = t54
+y = t12
+label = A
+type = normal
+destination_world_num = 1
+destination_label = A
+
+[door 2]
+world_num = 1
+level_num = 0
+map_num = 2
+x = t4 
+y = 272
+label = A
+type = normal
+destination_world_num = 1
+destination_label = A
+
+[door 3]
+world_num = 1
+level_num = 0
+map_num = 2
+x = t35
+y = 272
+label = B
+type = normal
+destination_world_num = 1
+destination_label = B
+
+[door 4]
+world_num = 1
+level_num = 0
+map_num = 3
+x =64
+y = 672
+label = B
+type = normal
+destination_world_num = 1
+destination_label = B
+
+[door 5]
+world_num = 1
+level_num = 0
+map_num = 3
+x = t53
+y = 608
+label = C
+type = normal
+destination_world_num = 1
+destination_label = C
+
+[door 6]
+world_num = 1
+level_num = 0
+map_num = 4
+x = t5
+y = 160
+label = C
+type = normal
+destination_world_num = 1
+destination_label = C
+
+[door 7]
+world_num = 1
+level_num = 0
+map_num = 3
+x = t78
+y = 608
+label = D
+type = normal
+destination_world_num = 1
+destination_label = D
+
+[door 8]
+world_num = 1
+level_num = 0
+map_num = 4
+x = t29
+y = 160
+label = D
+type = normal
+destination_world_num = 1
+destination_label = D
+
+[door 9 to level 2]
+world_num = 1
+level_num = 0
+map_num = 3
+x = 2240
+y = 672
+label = AA
+type = normal
+destination_world_num = 1
+destination_label = AA
+
+[door 10 to level 3]
+world_num = 1
+level_num = 0
+map_num = 3
+x = 1824
+y = 448
+label = BB
+type = normal
+destination_world_num = 1
+destination_label = BB
+
+
+
+###########
+# Level 2 #
+###########
+
+[door 11]
+world_num = 1
+level_num = 1
+map_num = 1
+x = 96
+y = 160
+label = AA
+type = normal
+destination_world_num = 1
+destination_label = AA
+
+
+
+###########
+# Level 3 #
+###########
+
+[door 12 to level 1]
+world_num = 1
+level_num = 2
+map_num = 1
+x = 48
+y = 944
+label = BB
+type = normal
+destination_world_num = 1
+destination_label = BB
+
+
+
+###########
+# Level 4 #
+###########
+
+[door 13]
+world_num = 1
+level_num = 3
+map_num = 1
+x = 272
+y = 192
+label = E
+type = normal
+destination_world_num = 1
+destination_label = E
+
+[door 14]
+world_num = 1
+level_num = 3
+map_num = 2
+x = 64
+y = 208
+label = E
+type = normal
+destination_world_num = 1
+destination_label = E
+
+
+###########
+# Level 5 #
+###########
+
+
+[door 15]
+world_num = 1
+level_num = 4
+map_num = 1
+x = t132
+y = t19
+label = F
+type = normal
+destination_world_num = 1
+destination_label = F
+
+[door 16]
+world_num = 1
+level_num = 4
+map_num = 2
+x = t4
+y = t8
+label = F
+type = normal
+destination_world_num = 1
+destination_label = F
+
+
+
+###########
+# Level 6 #
+###########
+
+
+[door 16]
+world_num = 1
+level_num = 5
+map_num = 1
+x = t55
+y = t62
+label = G
+type = normal
+destination_world_num = 1
+destination_label = G
+
+[door 17]
+world_num = 1
+level_num = 5
+map_num = 1
+x = t4
+y = t47
+label = G
+type = normal
+destination_world_num = 1
+destination_label = G
+
+[door 18]
+world_num = 1
+level_num = 5
+map_num = 1
+x = t58
+y = t47
+label = H
+type = normal
+destination_world_num = 1
+destination_label = H
+
+[door 19]
+world_num = 1
+level_num = 5
+map_num = 2
+x = t3
+y = t14
+label = H
+type = normal
+destination_world_num = 1
+destination_label = H
+
