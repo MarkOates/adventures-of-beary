@@ -9,7 +9,7 @@ all: motion main.cpp
 
 
 motion:
-	g++ -std=gnu++11 -c -o obj/motion.o motion.cpp -IE:/allegro-5.1.11-mingw-edgar/include
+	g++ -std=gnu++11 -c -o obj/motion.o motion.cpp
 
 
 
