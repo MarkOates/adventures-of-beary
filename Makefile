@@ -10,7 +10,7 @@ TMX_LIBS=-ltmx -lxml2 -lz
 
 
 all: obj/motion.o obj/main.o obj/tile_map_and_atlas.o
-	g++ -o bin/adventures_of_beary obj/main.o obj/motion.o $(ALLEGRO_LIBS) $(TMX_LIBS)
+	g++ -o bin/adventures_of_beary obj/main.o obj/motion.o obj/tile_map_and_atlas.o $(ALLEGRO_LIBS) $(TMX_LIBS)
 
 
 obj/main.o:
