@@ -47,6 +47,10 @@
 //////////////////////////////////////////////////////////////////////
 
 
+//
+// 'screens' are 25 x 14 tiles each
+//
+
 
 std::string new_level_name = "central_world_map";
 
@@ -127,30 +131,7 @@ void poll_mouse()
 
 
 
-// this fancy function will parse an interger value out of a string.
-// if the string starts with a 't' then the value is a tile coordinate,
-// so the value is multiplied by TILE_WIDTH to parse the value into
-// world coordinates.
 #define TILE_WIDTH 16
-int atoi_t(const char *ch)
-{
-	if (strlen(ch) == 0) return 0;
-	if (ch[0] != 't') return atoi(ch);
-	std::string str(ch);
-	return atoi(str.substr(1).c_str()) * TILE_WIDTH;
-}
-
-// an interesting technique.  These are in screen-widths ('c' for column) and screen-heights ('r' for row)
-// 'screens' are 25 x 14 tiles each
-float atof_rct(const char *ch)
-{
-	if (strlen(ch) == 0) return 0;
-	std::string str(ch);
-	if (ch[0] == 'r') return atof(str.substr(1).c_str()) * TILE_WIDTH * 14 + TILE_WIDTH / 2;
-	if (ch[0] == 'c') return atof(str.substr(1).c_str()) * TILE_WIDTH * 25 + TILE_WIDTH / 2;
-	if (ch[0] == 't') return atof(str.substr(1).c_str()) * TILE_WIDTH;
-	return atoi(ch);
-}
 
 
 float atof_t(const char *ch)
