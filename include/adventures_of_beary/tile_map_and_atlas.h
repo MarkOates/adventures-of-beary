@@ -2,6 +2,19 @@
 
 
 
+
+#include <allegro5/allegro.h>
+#include <allegro5/allegro_image.h>
+#include <allegro5/allegro_primitives.h>
+#include <vector>
+#include <iostream>
+
+
+
+int random_int(int min, int max);
+
+
+
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -53,6 +66,8 @@ public:
 		bitmap = NULL;
 		tile_index.clear();
 	}
+
+   static ALLEGRO_BITMAP *build_tile_atlas(int tile_w, int tile_h, std::vector<TileIndexInfo> &tile_index);
 
 	// load will *copy* the bitmap that you pass into it.  You probably would want to al_destroy_bitmap after loading; 
 	void load(ALLEGRO_BITMAP *tileset, int tile_width, int tile_height, int spacing=0)

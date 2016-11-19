@@ -2,11 +2,14 @@
 
 
 
+#include <adventures_of_beary/tile_map_and_atlas.h>
+
+
 
 
 // for future purposes, this (currently unused) function should be used to replace the current technique that is used to build the TileAtlas
 
-ALLEGRO_BITMAP *build_tile_atlas(int tile_w, int tile_h, std::vector<TileIndexInfo> &tile_index)
+ALLEGRO_BITMAP *TileAtlas::build_tile_atlas(int tile_w, int tile_h, std::vector<TileIndexInfo> &tile_index)
 	// this function is the superior tile atlas generator
 {
 	//al_set_new_bitmap_flags(ALLEGRO_MIN_LINEAR | ALLEGRO_MAG_LINEAR | ALLEGRO_MIPMAP);
