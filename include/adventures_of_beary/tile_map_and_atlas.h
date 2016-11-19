@@ -14,35 +14,34 @@
 
 
 
-class TileIndexInfo
-{
-public:
-	int index_num;
-
-	ALLEGRO_BITMAP *bitmap_source;
-	ALLEGRO_BITMAP *sub_bitmap;
-
-	int u1;
-	int v1;
-	int u2;
-	int v2;
-
-	TileIndexInfo()
-		: index_num(-1)
-		, bitmap_source(NULL)
-		, sub_bitmap(NULL)
-		, u1(0)
-		, v1(0)
-		, u2(0)
-		, v2(0)
-	{}
-};
-
-
-
 
 class TileAtlas
 {
+private:
+   class TileIndexInfo
+   {
+   public:
+      int index_num;
+
+      ALLEGRO_BITMAP *bitmap_source;
+      ALLEGRO_BITMAP *sub_bitmap;
+
+      int u1;
+      int v1;
+      int u2;
+      int v2;
+
+      TileIndexInfo()
+         : index_num(-1)
+         , bitmap_source(NULL)
+         , sub_bitmap(NULL)
+         , u1(0)
+         , v1(0)
+         , u2(0)
+         , v2(0)
+      {}
+   };
+
 public:
 	std::vector<TileIndexInfo> tile_index;
 	ALLEGRO_BITMAP *bitmap;
