@@ -6015,7 +6015,7 @@ public:
 	{
 		return new_tile_map_LAYER_0->get_height();
 	}
-	bool draw_layer(int tile_layer, float camera_x, float float_y)
+	bool draw_layer(int tile_layer, float camera_x, float float_y) override
 	{
 		if (tile_layer == BEARY_TILE_LAYER_BACKGROUND) new_tile_map_LAYER_BACKGROUND->draw(camera_x, camera_y);
 		if (tile_layer == BEARY_TILE_LAYER_0) new_tile_map_LAYER_0->draw(camera_x, camera_y);
