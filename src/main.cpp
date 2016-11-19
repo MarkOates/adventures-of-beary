@@ -3687,6 +3687,9 @@ public:
 		, fazed_from_damage(false)
 	{}
 
+   virtual ~EnemyBase()
+   {}
+
 	// state and drawing
 	bool is_dead()
 	{
