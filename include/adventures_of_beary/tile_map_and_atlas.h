@@ -143,9 +143,6 @@ public:
 };
 
 
-TileAtlas *new_tile_atlas = NULL;
-
-
 /*
 typedef struct
 {
