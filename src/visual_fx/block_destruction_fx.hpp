@@ -144,8 +144,6 @@ public:
 
     void add_particles(float xx, float yy, float velocity_xx=0, float velocity_yy=0)
     {
-         int counter = 50;
-
          velocity_xx /= 2;
          velocity_yy /= 2;
 

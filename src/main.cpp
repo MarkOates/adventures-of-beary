@@ -889,7 +889,6 @@ const char *full_filename(const char *address)
 
 void my_error_message2(std::string mess, ...)
 {
-   char buf[512];
 std::cout << "my_error_message2(): " << mess << std::endl;
      clear_keybuf();
      readkey();
@@ -1227,8 +1226,6 @@ void show_notification(std::string line1, std::string line2, int warning_level=-
 	ALLEGRO_COLOR back_color = al_map_rgba_f(color.r*0.35+0.1, color.g*0.35+0.1, color.b*0.35+0.1, 1);
 	ALLEGRO_COLOR line1_color = al_map_rgba_f(color.r*0.65+0.3, color.g*0.65+0.3, color.b*0.65+0.3, 1);
 	ALLEGRO_COLOR line2_color = al_color_name("white");
-
-	int width_of_box = max(text_length(font_small, line1.c_str()), text_length(font_small, line2.c_str())) + 40;
 
 	rectfill(screen, 100, 100, SCREEN_W-100, SCREEN_H-100, back_color);
 	textprintf_centre(screen, font_small, SCREEN_W/2, SCREEN_H/2-text_height(font_small)/2-7, line1_color, line1);
@@ -4122,7 +4119,6 @@ public:
 		// update the existing enemies
 
 		std::vector<EnemyBase *> &enemies = Enemies::get_instance()->enemies;
-		player_damage_zone collided_zone;
 		for (unsigned i=0; i<enemies.size(); i++)
 		{
 			if (enemies[i]->is_dead()) continue;
@@ -4363,7 +4359,6 @@ public:
 		element.velocity_x = enemy_ptr->velocity_x;
 		element.velocity_y = enemy_ptr->velocity_y;
 
-		float step_velocity_x = element.velocity_x*timestep;
 		float step_velocity_y = element.velocity_y*timestep;
 		bool lands_on_ground = false;
 		//float step_velocity_y = enemy_ptr.velocity_y*timestep;
@@ -4421,7 +4416,6 @@ public:
 			float next_y = now_y + step_velocity_y;
 
 			int num_passes = ceil(element.w / 16.0);
-			bool collides = false;
 
 			for (int i=0; i<=num_passes; i++)
 			{
@@ -4473,7 +4467,6 @@ public:
 		element.velocity_y = enemy_ptr->velocity_y;
 
 		float step_velocity_x = element.velocity_x*timestep;
-		float step_velocity_y = element.velocity_y*timestep;
 
 
 
@@ -4530,7 +4523,6 @@ public:
 			float next_y = now_y;
 
 			int num_passes = ceil(element.h / 16.0);
-			bool collides = false;
 
 			for (int i=0; i<=num_passes; i++)
 			{
@@ -4587,7 +4579,6 @@ void test_enemy_map_collision_vertical(EnemyBase *enemy_ptr, float timestep = GA
 	float element_y = enemy.y;
 	float element_w = enemy.w;
 	float element_h = enemy.h;
-	float step_velocity_x = enemy.velocity_x*timestep;
 	float step_velocity_y = enemy.velocity_y*timestep;
 
 
@@ -4649,15 +4640,12 @@ void test_enemy_map_collision_horizontal(EnemyBase *enemy_ptr, float timestep)
 	float element_w = enemy.w;
 	float element_h = enemy.h;
 	float step_velocity_x = enemy.velocity_x * GAMEPLAY_FRAME_DURATION_PER_SEC;
-	float setp_velocity_y = enemy.velocity_y * GAMEPLAY_FRAME_DURATION_PER_SEC;
 
 
 	if (step_velocity_x > 0.0f)
 	{
 		bool collided = false;
-		int y_step = 16;
 		int y_step_cursor=0;
-		bool last_check = false;
 
 
 		while(y_step_cursor<(int)element_h+1)
@@ -5512,7 +5500,6 @@ public: // this it's high security bank software!!
         else if (on_ramp != -1)
         {
             bool going_down_on_ramp = false;
-            bool going_up_on_ramp = false;  // not doin this one yet
  //           float point_to_test_y = point_on_ramp_y(on_ramp, get_center_int());
 
             if (velocity.x < 0.0f)
@@ -6507,9 +6494,6 @@ public:
 
 		std::cout << " -- swapping stick " << index_num << std::endl;
 
-		static ALLEGRO_BITMAP *on_bmp = _load_bitmap("images/on.gif");
-		static ALLEGRO_BITMAP *off_bmp = _load_bitmap("images/censored_poof.gif");
-
 		if (!current_map->new_tile_atlas)
 		{
 			std::cout << " -- AGH no atlas, can't swap" << std::endl;
@@ -6816,8 +6800,6 @@ void __post_process_map(NewBearyMap *m)
 				bool below_solid = StyleDrafter::matches(map, x, y+1, {11, 12});
 				bool above_left_solid = StyleDrafter::matches(map, x-1, y-1, {11, 12});
 				bool above_right_solid = StyleDrafter::matches(map, x+1, y-1, {11, 12});
-				bool below_left_solid = StyleDrafter::matches(map, x-1, y+1, {11, 12});
-				bool below_right_solid = StyleDrafter::matches(map, x+1, y+1, {11, 12});
 
 				if (this_solid)
 				{
@@ -7649,8 +7631,6 @@ void draw_map_layer_SPECIAL_TILES(int layer, int xx=0, int yy=0)
      int h=0;
      int k=0;
      //int the_number_of_tiles_in_the_maps_index = current_map.num_of_tiles();
-     bool done_with_loop = false;
-
 
 			//al_lock_bitmap(atlas, ALLEGRO_LOCK_READWRITE, ALLEGRO_PIXEL_FORMAT_ANY);
 
@@ -8722,7 +8702,6 @@ public:
 		Dialogues::clear();
 		//Items::clear(); //TODO: actually, this should only be cleared if this is a new level, maybe even "clear progress" if exiting a level or something
 
-		std::vector<level_record_struct> &levels = inst->levels;
 		level_record_struct level_to_load_from;
 		if (!get_level_record_struct_by_index_id(level_index, &level_to_load_from))
 		{
@@ -9301,16 +9280,10 @@ void draw_debug_info()
     textprintf(buffer, font_x_small, 2, 12+12, makecol(128,128,96), "Current world index: %d", get_current_world_index());
     textprintf(buffer, font_x_small, 2, 12+19, makecol(128,128,96), "Current level index: %d", get_current_level_index());
     textprintf(buffer, font_x_small, 2, 12+26, makecol(128,128,96), "Current map index: %d", get_current_map_index());
-    ALLEGRO_COLOR dum_col = makecol(128, 128, 255);
 
 
     if (player.on_ground) textprintf(buffer, font_x_small, SCREEN_W-50, SCREEN_H-10, WHITE, "ON_GROUND");
     textprintf(buffer, font_x_small, SCREEN_W-50, SCREEN_H-18, WHITE, "Ramp: %d", player.on_ramp);
-
-
-    // show camera lock information
-    int spacer = 0;
-
 }
 
 
@@ -9407,9 +9380,6 @@ bool point_box_collision(float x, float y, float xx1, float yy1, float xx2, floa
 void test_enemy_bullet_collisions()
 {
     if (bullet_manager.bullet.size() == 0) return;
-
-    int simultanious_kill_counter=0;
-    int points_in_fer=0;
 
     for (int i=0; i<bullet_manager.bullet.size(); i++)
     {
@@ -10778,7 +10748,6 @@ void do_logic(void)
 					checkpoint_struct last_checkpoint;
 					if (Checkpoints::get_last_visited_checkpoint(&last_checkpoint))
 					{
-						checkpoint_struct destination_door = last_checkpoint;
 						std::cout << "DEAD... need to respawn" << std::endl;
 					}
 					else

@@ -207,30 +207,15 @@ public:
 
 				std::cout << " - Drawing to tile " << tile_num << " - " << std::endl;
 
-			int tile_width = 16;
-			int tile_height = 16;
-			int spacing = 1;
-
 			if (!bitmap)
 			{
 				std::cout << "[TileAtlas::draw_to_tile_atlas()] ERROR: the ALLEGRO_BITMAP provided is NULL" << std::endl;
 				return;
 			}
 
-			int tile_step_x = tile_width + spacing;
-			int tile_step_y = tile_height + spacing;
-
-			int num_columns = al_get_bitmap_width(bitmap) / tile_step_x;
-			int num_rows = al_get_bitmap_height(bitmap) / tile_step_y;
-
 			for (int index_num=0; index_num<(int)tile_index.size(); index_num++)
 			{
 				if (index_num != tile_num) continue;
-
-				int x1 = (index_num % num_columns) * tile_step_x + spacing;
-				int y1 = (index_num / num_columns) * tile_step_y + spacing;
-				int x2 = x1 + tile_width;
-				int y2 = y1 + tile_height;
 
 					ALLEGRO_STATE previous_state;
 					al_store_state(&previous_state, ALLEGRO_STATE_TARGET_BITMAP);
