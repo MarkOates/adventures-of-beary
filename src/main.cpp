@@ -11,8 +11,8 @@
 
 
 
-#define version_number "Beta v.42"
-#define COPYRIGHT_TEXT  "Copyright 2015 - Mark Oates - " version_number
+#define version_number "Beta v.5-wip"
+#define COPYRIGHT_TEXT  "Copyright 2016 - Mark Oates - " version_number
 
 #include <stdlib.h>
 #include <vector>
