@@ -13,11 +13,11 @@ all: obj/motion.o obj/main.o
 
 
 obj/main.o:
-	g++ -std=gnu++11 -c -o obj/main.o src/main.cpp -I$(ALLEGRO_DIR)/include -I$(TMX_DIR)
+	g++ -Wall -std=gnu++11 -c -o obj/main.o src/main.cpp -I$(ALLEGRO_DIR)/include -I$(TMX_DIR)
 
 
 obj/motion.o:
-	g++ -std=gnu++11 -c -o obj/motion.o src/motion.cpp
+	g++ -Wall -std=gnu++11 -c -o obj/motion.o src/motion.cpp
 
 
 .PHONY: clean
