@@ -1099,7 +1099,7 @@ private:
 		if (!instance) instance = new Doors();
 		return instance;
 	}
-	static bool _clear()
+	static void _clear()
 	{
 		get_instance()->doors.clear();
 		new_door_struct::last_unique_id = 1;
@@ -1161,16 +1161,16 @@ public:
 
 		return false;
 	}
-	static bool clear()
+	static void clear()
 	{
 		_clear();
 	}
-	static bool load(std::string filename)
+	static void load(std::string filename)
 	{
 		_clear();
 		append_doors_file(filename);
 	}
-	static bool add_door(int world_num, int level_num, int map_num, float x, float y, std::string label, int type, int destination_world_num, std::string destination_label)
+	static void add_door(int world_num, int level_num, int map_num, float x, float y, std::string label, int type, int destination_world_num, std::string destination_label)
 	{
 		new_door_struct new_door;
 
@@ -2795,7 +2795,7 @@ public:
 		//Items::clear();
 		//Items::append_items_file(filename);
 	}
-	static bool spawn_item(int world_num, int level_num, int map_num, float x, float y, float align_x, float align_y, item_t type, float velocity_x, float velocity_y)
+	static void spawn_item(int world_num, int level_num, int map_num, float x, float y, float align_x, float align_y, item_t type, float velocity_x, float velocity_y)
 	{
 		item_struct *new_item = add_item(world_num, level_num, map_num, x, y, align_x, align_y, type);
 
@@ -3092,7 +3092,7 @@ public:
 		return checkpoint;
 	}
 
-	static bool clear()
+	static void clear()
 	{
 		Checkpoints *inst = get_instance();
 		checkpoint_struct::last_unique_id = 1;
@@ -3100,7 +3100,7 @@ public:
 		inst->checkpoints.clear();
 	}
 
-	static bool load(std::string filename)
+	static void load(std::string filename)
 	{
 		clear();
 		append_checkpoints_file(filename);
@@ -4577,7 +4577,7 @@ public:
 		for (unsigned i=0; i<enemies.size(); i++) delete enemies[i];
 		enemies.clear();
 	}
-	static bool add_enemy_spawner(int world_num, int level_num, int map_num, int origin_x, int origin_y, int origin_w, int origin_h, std::string identifier)
+	static void add_enemy_spawner(int world_num, int level_num, int map_num, int origin_x, int origin_y, int origin_w, int origin_h, std::string identifier)
 	{
 		std::vector<EnemySpawner> &enemy_spawners = Enemies::get_instance()->enemy_spawners;
 
@@ -4724,10 +4724,10 @@ public:
 	float get_bottom() { return y+h; }
 	float get_top() { return y; }
 
-	float set_left(float x) { this->x = x; }
-	float set_right(float x) { this->x = x - w; }
-	float set_bottom(float y) { this->y = y - h; }
-	float set_top(float y) { this->y = y; }
+	void set_left(float x) { this->x = x; }
+	void set_right(float x) { this->x = x - w; }
+	void set_bottom(float y) { this->y = y - h; }
+	void set_top(float y) { this->y = y; }
 
 	static bool on_enter_new_tiles_moving_downward(TileAndObjectCollision &obj, std::vector<int2> tiles)
 	{
@@ -5752,11 +5752,11 @@ public: // this it's high security bank software!!
         if (is_ducking) {size.y += 12; map_pos.y-=12;}
         is_ducking = false;
         }
-    int move_right(void) {
+    void move_right(void) {
         moving_direction = MOVING_RIGHT;
         facing_right = true;
         }
-    int move_left(void) {
+    void move_left(void) {
         moving_direction = MOVING_LEFT;
         facing_right = false;
         }
@@ -6444,7 +6444,7 @@ float get_player_middle()
 bool is_switch_stick(int tile_num);
 void play_switch_sound();
 //bool swap_switch_stick(int index_num);
-bool set_switch_stick(int index_num, bool on);
+void set_switch_stick(int index_num, bool on);
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -6556,6 +6556,7 @@ public:
 		if (tile_layer == BEARY_TILE_LAYER_1) return new_tile_map_LAYER_1->get_tile(tile_x, tile_y);
 		if (tile_layer == BEARY_TILE_LAYER_2) return new_tile_map_LAYER_2->get_tile(tile_x, tile_y);
 		if (tile_layer == BEARY_TILE_LAYER_BOUNDARY) return new_tile_map_LAYER_BOUNDARY->get_tile(tile_x, tile_y);
+      return 0;
 	}
 	bool set_tile(int tile_x, int tile_y, int tile_layer, int tile) override
 	{
@@ -6564,6 +6565,7 @@ public:
 		if (tile_layer == BEARY_TILE_LAYER_1) return new_tile_map_LAYER_1->set_tile(tile_x, tile_y, tile);
 		if (tile_layer == BEARY_TILE_LAYER_2) return new_tile_map_LAYER_2->set_tile(tile_x, tile_y, tile);
 		if (tile_layer == BEARY_TILE_LAYER_BOUNDARY) return new_tile_map_LAYER_BOUNDARY->set_tile(tile_x, tile_y, tile);
+      return 0;
 	}
 	int get_width()
 	{
@@ -7149,7 +7151,7 @@ public:
 Switches *Switches::instance = NULL;
 
 
-bool set_switch_stick(int index_num, bool on)
+void set_switch_stick(int index_num, bool on)
 {
 	if (is_switch_active(index_num) != on) Switches::toggle_switch_stick(index_num);
 }
@@ -8069,7 +8071,7 @@ bool is_switch_stick(int tile_num)
 
 bool player_on_switch_block = false;
 
-bool check_switch_behind_player()
+void check_switch_behind_player()
 {
      int block_below_block_behind_player = block_type_at(player.get_center_int(), player.get_middle_int()+16);
      int block_behind_player = block_type_at(player.get_center_int(), player.get_middle_int()+16+16);
@@ -8781,6 +8783,7 @@ public:
 		{
 			std::cout << "There was an error when loading the tmx file by tmx_load()" << std::endl;
 			tmx_perror("tmxlib reported the following error");
+         return false;
 		}
 
 		//
@@ -9068,6 +9071,8 @@ public:
 
 		// delete the tmx parsed map
 		tmx_map_free(m);
+
+      return true;
 	}
 	static bool append_doors_from_tmx_file(std::string filename, int as_level_num, int as_map_num)
 	{
@@ -9135,6 +9140,8 @@ public:
 
 		// delete the tmx parsed map
 		tmx_map_free(m);
+
+      return true;
 	}
 };
 
