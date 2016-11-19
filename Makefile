@@ -8,7 +8,7 @@ TMX_BUILD=-ltmx -lxml2 -lz -LE:/tmx-deps/lib -LE:/tmx-build/lib -LE:/libxml2-2.9
 
 
 all: obj/motion.o obj/main.o
-	g++ -o bin/adventures_of_beary obj/main.o obj/motion.o -LE:/allegro-5.1.11-mingw-edgar/lib -lallegro_monolith-debug.dll $(TMX_BUILD)
+	g++ -o bin/adventures_of_beary obj/main.o obj/motion.o
 
 
 obj/main.o:
