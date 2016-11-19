@@ -688,7 +688,7 @@ public:
 			doors.push_back(new_door);
 			std::cout << "door section added: " << current_section << " (" << new_door.world_num << " - " << new_door.level_num << " - " << new_door.map_num << std::endl;
 
-		} while(current_section = al_get_next_config_section(&section));
+		} while((current_section = al_get_next_config_section(&section)));
 
 		std::cout << "doors file loaded successfully. " << doors.size() << " door(s) created." << std::endl;
 
@@ -1840,7 +1840,7 @@ public:
 		if (al_open_directory(fs_entry))
 		{
 			ALLEGRO_FS_ENTRY *entry = NULL;
-			while(entry = al_read_directory(fs_entry))
+			while((entry = al_read_directory(fs_entry)))
 			{
 				constructed_sequence.add_frame(_load_bitmap(al_get_fs_entry_name(entry)), framerate);
 
@@ -2647,7 +2647,7 @@ public:
 			#undef get_config_val
 
 			checkpoints.push_back(new_checkpoint);
-		} while (current_section = al_get_next_config_section(&section));
+		} while ((current_section = al_get_next_config_section(&section)));
 
 		std::cout << "checkpoints file loaded successfully. " << checkpoints.size() << " checkpoint(s) created." << std::endl;
 
@@ -8220,7 +8220,7 @@ private:
 			//if (found_layer->name == name.c_str())  // <- this won't work, yo ;)
 			if (strcmp(found_layer->name, name.c_str()) == 0)
 				return found_layer;
-		} while (found_layer = found_layer->next);
+		} while ((found_layer = found_layer->next));
 
 		return NULL;
 	}
@@ -8251,7 +8251,7 @@ public:
 			{
 				if (strcmp(prop->name, "title") == 0) title = prop->value;
 				if (strcmp(prop->name, "style") == 0) style = prop->value;
-			} while(prop = prop->next);
+			} while((prop = prop->next));
 		}
 
 		ALLEGRO_BITMAP *tile_atlas_bmp = al_load_bitmap("images/beary_tileset_03.png");
@@ -8431,7 +8431,7 @@ public:
 						do
 						{
 							if (strcmp(prop->name, "switch_num") == 0) switch_num = atoi(prop->value);
-						} while(prop = prop->next);
+						} while((prop = prop->next));
 					}
 
 					if (switch_num == -1) std::cout << "missing \"switch_num\" property in switch_stick" << std::endl;
@@ -8568,7 +8568,7 @@ public:
 							else if (strcmp(prop->name, "type") == 0) type = Doors::get_door_type_from_identifier(prop->value);
 							else if (strcmp(prop->name, "destination_world_num") == 0) destination_world_num = atoi(prop->value);
 							else if (strcmp(prop->name, "destination_label") == 0) destination_label = prop->value;
-						} while(prop = prop->next);
+						} while((prop = prop->next));
 					}
 					else
 					{
