@@ -6065,7 +6065,7 @@ void update_enemy_position(EnemyBase *enemy_ptr)
 
 
 class character_class;
-void NEW_update_player_position(character_class);
+void NEW_update_player_position(character_class *enemy_ptr);
 
 
 
