@@ -537,8 +537,8 @@ void inspect(const new_door_struct &door)
 class Doors
 {
 private:
-	ALLEGRO_BITMAP *crazy_ass_door;
 	std::vector<new_door_struct> doors;
+	ALLEGRO_BITMAP *crazy_ass_door;
 	static Doors *instance;
 	Doors()
 		: doors()
@@ -3667,11 +3667,11 @@ public:
 		, type(ENEMY_TYPE_UNDEF)
 		, x(origin_x)
 		, y(origin_y)
-		, facing_left(true)
 		, w(16)
 		, h(32)
 		, velocity_x(0)
 		, velocity_y(0)
+		, facing_left(true)
 		, health(1)
 		, max_health(1)
 		, post_pain_counter(0)
@@ -6390,12 +6390,12 @@ public:
 	int switch_num;
 
 	switch_stick_instance_struct(int switch_num, float x, float y)
-		: switch_num(switch_num)
-		, width(16)
+		: width(16)
 		, height(24)
 		, x(x-width/2)
 		, y(y-height)
 		, player_now_over(false)
+		, switch_num(switch_num)
 	{}
 
 	bool collides(float xx, float yy)
