@@ -2,10 +2,14 @@
 
 
 
-#include <adventures_of_beary/tile_map_and_atlas.h>
+#include <adventures_of_beary/tile_map.h>
 
 #include <iostream>
 
+
+
+
+int random_int(int min, int max);
 
 
 
