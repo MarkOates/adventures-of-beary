@@ -13,7 +13,7 @@ all: obj/motion.o obj/main.o
 
 
 obj/main.o:
-	g++ -Wall -Werror -std=gnu++11 -c -o obj/main.o src/main.cpp -I$(ALLEGRO_DIR)/include -I$(TMX_DIR)
+	g++ -Wall -Werror -std=gnu++11 -c -o obj/main.o src/main.cpp -I$(ALLEGRO_DIR)/include -I$(TMX_DIR) -I./include
 
 
 obj/motion.o:
