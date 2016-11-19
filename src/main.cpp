@@ -145,23 +145,6 @@ float atof_t(const char *ch)
 
 std::vector<std::string> explode(const std::string &delimiter, const std::string &str);
 
-ALLEGRO_COLOR atocol(const char *ch)
-{
-	ALLEGRO_COLOR result;
-	std::string str = ch;
-	std::vector<std::string> parts = explode(" ", str);
-	if (parts.size() != 4)
-	{
-		std::cout << "error parsing color from string \"" << ch << "\"." << std::endl;
-		return al_map_rgba_f(0, 0, 0, 0);
-	}
-	result.r = atof(parts[0].c_str());
-	result.g = atof(parts[1].c_str());
-	result.b = atof(parts[2].c_str());
-	result.a = atof(parts[3].c_str());
-	return result;
-}
-
 std::string color_to_string(ALLEGRO_COLOR col)
 {
 	std::stringstream ss;
