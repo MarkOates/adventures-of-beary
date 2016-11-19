@@ -93,25 +93,18 @@ public:
 
    TileMap();
 
+   void resize(int w, int h, int tile_w, int tile_h);
+   void random_fill();
    void use_tile_atlas(TileAtlas *atlas);
 
-   void resize(int w, int h, int tile_w, int tile_h);
-
+   int get_width();
+   int get_height();
    int get_num_tiles();
-
+   int get_tile(int tile_x, int tile_y);
+   bool set_tile(int tile_x, int tile_y, int tile_index);
    bool set_contiguous_tile_num(int contiguous_tile_num, int tile_index);
 
-   int get_tile(int tile_x, int tile_y);
-
-   bool set_tile(int tile_x, int tile_y, int tile_index);
-
    void draw(int camera_x, int camera_y);
-
-   void random_fill();
-
-   int get_width();
-
-   int get_height();
 };
 
 
