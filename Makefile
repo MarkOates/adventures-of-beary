@@ -25,7 +25,7 @@ obj/tile_atlas.o: src/tile_atlas.cpp
 	g++ -Wall -Werror -std=gnu++11 -c -o obj/tile_atlas.o src/tile_atlas.cpp -I$(ALLEGRO_DIR) -I$(INCLUDE_DIR)
 
 
-obj/tile_map.o: stc/tile_map.cpp
+obj/tile_map.o: src/tile_map.cpp
 	g++ -Wall -Werror -std=gnu++11 -c -o obj/tile_map.o src/tile_map.cpp -I$(ALLEGRO_DIR) -I$(INCLUDE_DIR)
 
 
