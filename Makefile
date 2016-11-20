@@ -13,19 +13,19 @@ all: obj/motion.o obj/main.o obj/tile_atlas.o obj/tile_map.o
 	g++ -o bin/adventures_of_beary obj/main.o obj/motion.o obj/tile_atlas.o obj/tile_map.o $(ALLEGRO_LIBS) $(TMX_LIBS)
 
 
-obj/main.o:
+obj/main.o: src/main.cpp
 	g++ -Wall -Werror -std=gnu++11 -c -o obj/main.o src/main.cpp -I$(ALLEGRO_DIR)/include -I$(TMX_DIR) -I./include
 
 
-obj/motion.o:
+obj/motion.o: src/motion.cpp
 	g++ -Wall -Werror -std=gnu++11 -c -o obj/motion.o src/motion.cpp
 
 
-obj/tile_atlas.o:
+obj/tile_atlas.o: src/tile_atlas.cpp
 	g++ -Wall -Werror -std=gnu++11 -c -o obj/tile_atlas.o src/tile_atlas.cpp -I$(ALLEGRO_DIR) -I$(INCLUDE_DIR)
 
 
-obj/tile_map.o:
+obj/tile_map.o: stc/tile_map.cpp
 	g++ -Wall -Werror -std=gnu++11 -c -o obj/tile_map.o src/tile_map.cpp -I$(ALLEGRO_DIR) -I$(INCLUDE_DIR)
 
 
