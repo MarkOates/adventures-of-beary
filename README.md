@@ -12,7 +12,7 @@ Adventures of Beary
 
 ```
 git clone http://github.com/MarkOates/adventures-of-beary.git
-cd adventures_of_beary
+cd adventures-of-beary
 ```
 
 in `Makefile`, update the folders for `TMX_DIR` and `ALLEGRO_DIR` to thier install directories.  Then simply:
