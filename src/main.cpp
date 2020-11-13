@@ -842,11 +842,7 @@ string make_absolute(string filename)
 
 
 
-const char *full_filename(const char *address)
-{
-   return make_absolute(address).c_str();
-   //return replace_filename(buf, arg_string, address, sizeof(buf));
-}
+#define full_filename(address) (make_absolute(address).c_str())
 
 
 #define load_bitmap(x) _load_bitmap(x)
