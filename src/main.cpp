@@ -1993,7 +1993,7 @@ public:
       if (yy > y+hsize) return false;
       return true;
    }
-   virtual void update()
+   void update()
    {
       if (!alive) return;
 
