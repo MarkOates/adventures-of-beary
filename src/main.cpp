@@ -8372,11 +8372,9 @@ public:
 
                if (obj->properties)
                {
-                  tmx_property *prop = obj->properties;
-                  do
-                  {
-                     if (strcmp(prop->name, "switch_num") == 0) switch_num = atoi(prop->value);
-                  } while((prop = prop->next));
+                  tmx_property *prop = tmx_get_property(obj->properties, "switch_num");
+
+                  if (prop) switch_num = prop->value.integer;
                }
 
                if (switch_num == -1) std::cout << "missing \"switch_num\" property in switch_stick" << std::endl;
