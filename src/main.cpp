@@ -8503,15 +8503,16 @@ public:
                if (obj->properties)
                {
                   std::cout << "CC";
-                  tmx_property *prop = obj->properties;
-                  do
-                  {
-                     std::cout << "DD";
-                     if (strcmp(prop->name, "label") == 0) label = prop->value;
-                     else if (strcmp(prop->name, "type") == 0) type = Doors::get_door_type_from_identifier(prop->value);
-                     else if (strcmp(prop->name, "destination_world_num") == 0) destination_world_num = atoi(prop->value);
-                     else if (strcmp(prop->name, "destination_label") == 0) destination_label = prop->value;
-                  } while((prop = prop->next));
+
+                  tmx_property *label_prop = tmx_get_property(obj->properties, "label");
+                  tmx_property *type_prop = tmx_get_property(obj->properties, "type");
+                  tmx_property *destination_world_num_prop = tmx_get_property(obj->properties, "destination_world_num");
+                  tmx_property *destination_label_prop = tmx_get_property(obj->properties, "destination_label");
+
+                  if (label_prop) label = label_prop->value.string;
+                  if (type_prop) type = Doors::get_door_type_from_identifier(type_prop->value.string);
+                  if (destination_world_num_prop) destination_world_num = atoi(destination_world_num_prop->value.string); // should this be string? or integer?
+                  if (destination_label_prop) destination_label = destination_label_prop->value.string; // should this be string? or integer?
                }
                else
                {
