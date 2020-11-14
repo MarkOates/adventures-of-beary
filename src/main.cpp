@@ -8334,7 +8334,7 @@ public:
          tmx_object *obj = camera_region_layer->content.objgr->head;
          while (obj)
          {
-            if (obj->shape == S_SQUARE)
+            if (obj->obj_type == OT_SQUARE)
             {
                CameraRegions::add_camera_region(obj->x, obj->y, obj->x + obj->width, obj->y + obj->height);
             }
