@@ -8188,16 +8188,15 @@ public:
 
       // properties
 
-      std::string style = "";
       std::string title = "-Untitled-";
+      std::string style = "";
       if (m->properties)
       {
-         tmx_property *prop = m->properties;
-         do
-         {
-            if (strcmp(prop->name, "title") == 0) title = prop->value;
-            if (strcmp(prop->name, "style") == 0) style = prop->value;
-         } while((prop = prop->next));
+         tmx_property* title_prop = tmx_get_property(m->properties, "title");
+         tmx_property* style_prop = tmx_get_property(m->properties, "style");
+
+         title = title_prop->value.string;
+         style = style_prop->value.string;
       }
 
       ALLEGRO_BITMAP *tile_atlas_bmp = al_load_bitmap("images/beary_tileset_03.png");
